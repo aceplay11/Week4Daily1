@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Week4Daily1</string>
+    <string name="username">UserName</string>
+    <string name="user_bio">User Bio</string>
+    <string name="user_location">User Location</string>
+    <string name="user_login_name">User Login Name</string>
+</resources>
