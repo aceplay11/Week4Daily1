@@ -1,15 +1,13 @@
 package com.example.week4daily1;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-
 import com.example.week4daily1.model.datasource.github.GitHubResponse;
 import com.example.week4daily1.model.datasource.remote.OkHttpGitHub;
-
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
@@ -22,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     TextView tvBio;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,14 +30,8 @@ public class MainActivity extends AppCompatActivity {
         tvBio = findViewById(R.id.tvBio);
         OkHttpGitHub okHttpGitHub = new OkHttpGitHub();
         okHttpGitHub.getAsyncResponse();
-//        RepoGitHubResponse okHpGitHub = new RepoGitHubResponse();
-//        okHpGitHub.getAsyncResponse();
-    }
 
-    public void onClick(View view) {
-        //tvUserName.setText(gitH);
     }
-
 
 
     @Override
@@ -67,4 +58,8 @@ public class MainActivity extends AppCompatActivity {
         tvBio.setText(gitHubResponse.getBio());
     }
 
+    public void onClick(View view) {
+        startActivity(new Intent(this, GithubRepoActivity.class));
+
+    }
 }

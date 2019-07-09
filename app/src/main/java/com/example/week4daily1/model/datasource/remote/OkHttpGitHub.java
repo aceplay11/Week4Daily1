@@ -1,6 +1,6 @@
 package com.example.week4daily1.model.datasource.remote;
 
-import android.os.AsyncTask;
+
 import android.util.Log;
 
 import com.example.week4daily1.model.datasource.github.GitHubResponse;
@@ -40,8 +40,5 @@ public class OkHttpGitHub {
 
             }
         });
-
     }
-
-
 }
